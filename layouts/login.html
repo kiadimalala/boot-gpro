@@ -2,22 +2,20 @@
     <div class="login flex flex-col  items-center w-full h-full">
         <h1 class="login__title text-6xl mb-16" >AUTHENTIFICATION</h1>
         <div class="login__logo mb-10">
-
             <!-- logo ici -->
             <h1 class="logo__title text-6xl">DGFAG</h1>
-            
         </div>
         <div class="login__card p-4 h-auto bg-gray-200 bg-opacity-50 rounded-lg flex flex-col">
            <h1 class="card__title text-center text-3xl mb-4">LOGIN</h1>
            <div class="card__matricule flex items-center mb-8 ">
             <span class="absolute w-10 h-10 flex justify-center items-center text-xl bg-gray-400 rounded-lg"><i class="fa fa-user" aria-hidden="true"></i></span>
-            <input class=" pl-12  h-10 w-full rounded-lg " type="text" placeholder="Matricule">
+            <input id="matricule" class=" pl-12  h-10 w-full rounded-lg " type="text" placeholder="Matricule">
            </div>
            <div class="card__password flex items-center mb-8">
             <span class="absolute w-10 h-10 flex justify-center items-center tex-xl bg-gray-400 rounded-lg"> <i class="fa fa-key" aria-hidden="true"></i></span>
-            <input class="pl-12  h-10 w-full rounded-lg" type="password" placeholder="Mot de passe">
+            <input id="password" class="pl-12  h-10 w-full rounded-lg" type="password" placeholder="Mot de passe">
            </div>
-           <button class="w-full bg-blue-500 h-10 rounded-lg mb-8 text-lg text-gray-100">SOUMETTRE</button>
+           <button id="soumettre" class="w-full bg-blue-500 h-10 rounded-lg mb-8 text-lg text-gray-100">SOUMETTRE</button>
            <h3 class="text-sm flex justify-end mb-4 font-semibold">Mot de passe oublié!?</h3>
         </div>
     </div>

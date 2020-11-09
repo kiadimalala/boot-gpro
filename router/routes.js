@@ -1,12 +1,9 @@
-import {vm} from '../js/viewModel.js'
-
 (function ($) {
   var routes = {},
     defaultRoute = "login";
 
   function isUserAuthenticated() {
     var defer = $.Deferred();
-
     var isAuthenticated = sessionStorage.getItem("authenticate");
     if (isAuthenticated == "true") {
       defer.resolve();
@@ -19,8 +16,31 @@ import {vm} from '../js/viewModel.js'
 
   routes["login"] = {
     url: "#/",
-    templateUrl: "../layouts/login.html",
-    viewModel: vm.loginVm,
+    templateUrl: "layouts/login.html",
+    viewModel: vm.loginVM,
+  };
+
+  routes["admin"] = {
+    url: "#/admin",
+    abstract: true,
+    resolve: [isUserAuthenticated],
+    templateUrl: "layouts/admin.html",
+  };
+
+  routes["admin.dashboard"] = {
+    url: "",
+    templateUrl: "layouts/dashboard.html",
+    viewModel: vm.dashboardVM,
+  };
+  routes["admin.departement"] = {
+    url: "/departement",
+    templateUrl: "layouts/departement.html",
+    viewModel:vm.dptVM,
+  };
+
+  routes["unauthorized"] = {
+    url: "#/unauthorized",
+    templateUrl: "layouts/unauthorized.html",
   };
 
   $.router

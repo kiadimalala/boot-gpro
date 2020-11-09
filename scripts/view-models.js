@@ -1,6 +1,6 @@
 let vm = {};
 (function () {
-  //Gestion page login
+  //======================================================Gestion page login=========================================================
   vm.loginVM = function () {
     sessionStorage.setItem("authenticate", false);
 
@@ -16,12 +16,12 @@ let vm = {};
     });
   };
 
-  //Gestion page département
+  //====================================================Gestion page département=================================================
   vm.dashboardVM = function () {
     let DPT = [];
     //Récupérer les départements du localStorage
     $(document).ready(function () {
-      let local_DPT = JSON.parse(localStorage["DPT"]);
+      let local_DPT = JSON.parse(localStorage["DPT"] || "[]");
       local_DPT.forEach((dpt) => {
         let template = `<div class="dashboard__item bg-gray-200 bg-opacity-50 grid-rows-3 w-full h-16 rounded-lg text-xl text-opacity-25 focus:outline-none flex items-center cursor-pointer " >
         <h1 class=" w-full text-center text-3xl"> ${dpt} </h1>
@@ -54,22 +54,59 @@ let vm = {};
           $("#add__input").val(null);
           //ajout au DOM de la valeur saisie
           $(".dashboard__add").before(item_template);
+          //Redirection de l'élement dynamique vers page département sur click
+          $(document).find(
+            $(".dashboard__item").click(function () {
+              $.router.go("admin.departement");
+            })
+          );
         }
       }
     });
   };
 
-  //Gestion page Département
+  //======================================================Gestion page Service===========================================
   vm.dptVM = function () {
     let services = ["SSB", "SRF", "SSSA", "SSPI", "SRB"];
+    let divisions = ["SCME", "SREX", "SAEPB", "SLF", "SLR"];
     $(document).ready(function () {
-      console.log($.router.getCurrentRoute());
+      //Rendu des service sur le DOM
+      let counter = 0;
       services.forEach((service) => {
-        let template = `<div
-      class="dpt__item mb-6 bg-gray-200 bg-opacity-50 grid-rows-3 w-64 h-16 rounded-lg text-xl text-opacity-25 focus:outline-none flex items-center cursor-pointer ">
-      <h1 class=" w-full text-center text-3xl"> ${service} </h1>
+        //template des services
+        counter++;
+        let service__template = `<div
+      class="dpt__item mb-6 bg-gray-200 bg-opacity-50 grid-rows-3 w-64 h-16 rounded-lg text-xl text-opacity-25 focus:outline-none flex justify-center items-center cursor-pointer ">
+      <h1 class=" text-3xl"> ${service} </h1>
   </div>`;
-        $(".dpt__services").append(template);
+
+        //template container des division
+        let dvs__container = `<div class="divisions__container-${counter} w-full flex justify-between h-16 mb-6">
+        
+      </div>`;
+
+        //Rendu des divisions sur le DOM
+        $(".dpt__services").append(service__template);
+        $(".dpt__divisions").append(dvs__container);
+      });
+      divisions.forEach((division) => {
+        let dvs__template = `<div
+        class="services__item mb-6 bg-gray-200 bg-opacity-50 grid-rows-3 w-32 h-16 rounded-lg text-xl text-opacity-25 focus:outline-none flex justify-center items-center cursor-pointer ">
+        <h1 class=" w-full text-center text-3xl"> ${division} </h1>
+    </div>`;
+        $(".divisions__container-1").append(dvs__template);
+        $(".divisions__container-1").hide();
+
+        //Redirection vers page division
+        $(".services__item").click(function () {
+          $.router.go("admin.divisions");
+        });
+      });
+
+      //Derouler les divisions
+      $(".dpt__item").click(function () {
+        $(".divisions__container-1").toggle("magictime slideLeft");
+        $(".divisions__container-1").show();
       });
     });
   };

@@ -43,6 +43,13 @@
     templateUrl: "layouts/unauthorized.html",
   };
 
+  routes["admin.divisions"] = {
+    url: "/divisions",
+    templateUrl: "layouts/divisions.html",
+    //viewModel:vm.dptVM,
+  };
+  
+
   $.router
     .setData(routes)
     .setDefault(defaultRoute)

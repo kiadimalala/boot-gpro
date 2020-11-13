@@ -1,65 +1,37 @@
-(function ($) {
-  var routes = {},
-    defaultRoute = "login";
+(function($){
+    var routes = {},
+    defaultRoute = 'login';
 
-  function isUserAuthenticated() {
-    var defer = $.Deferred();
-    var isAuthenticated = sessionStorage.getItem("authenticate");
-    if (isAuthenticated == "true") {
-      defer.resolve();
-    } else {
-      defer.reject();
-      $.router.go("unauthorized");
+    routes['login'] = {
+        url:'#/',
+        templateUrl:'/layouts/login.html',
+        viewModel : vm.loginVM
     }
-    return defer;
-  }
+    routes['dashboard'] ={
+        url:'#/dashboard',
+        templateUrl:'/layouts/dashboard.html',
+        viewModel : vm['dashboardVM']
+    }
 
-  routes["login"] = {
-    url: "#/",
-    templateUrl: "layouts/login.html",
-    viewModel: vm.loginVM,
-  };
+    routes['direction']={
+        url:'#/dashboard/direction/:directionId',
+        templateUrl:'/layouts/direction.html',
+        viewModel : vm['directionVM']
+    }
 
-  routes["admin"] = {
-    url: "#/admin",
-    abstract: true,
-    resolve: [isUserAuthenticated],
-    templateUrl: "layouts/admin.html",
-  };
-
-  routes["admin.dashboard"] = {
-    url: "",
-    templateUrl: "layouts/dashboard.html",
-    viewModel: vm.dashboardVM,
-  };
-  routes["admin.departement"] = {
-    url: "/departement",
-    templateUrl: "layouts/departement.html",
-    viewModel:vm.dptVM,
-  };
-
-  routes["unauthorized"] = {
-    url: "#/unauthorized",
-    templateUrl: "layouts/unauthorized.html",
-  };
-
-  routes["admin.divisions"] = {
-    url: "/divisions",
-    templateUrl: "layouts/divisions.html",
-    //viewModel:vm.dptVM,
-  };
-  
-
-  $.router
+    routes['division'] = {
+        url:'#/dashboard/direction/:directionId/division/:divisionId',
+        templateUrl:'/layouts/division.html',
+        viewModel : vm['divisionVM']
+    }
+    $.router
     .setData(routes)
     .setDefault(defaultRoute)
-    .onRouteChanged(function (e, route, param) {
-      if (route.viewModel) {
-        route.viewModel(route, param);
-      }
+    .onRouteChanged(function(e, route, param) {
+      route.viewModel(route, param);
     });
 
-  $.when($.ready).then(function () {
-    $.router.run(".my-view", "login");
+  $.when($.ready).then(function() {
+    $.router.run('.my-view', 'login');
   });
 })(jQuery);

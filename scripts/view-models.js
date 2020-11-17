@@ -1,4 +1,4 @@
-var vm = {};
+let vm = {};
 (function () {
   let DPT = [
     "DB",
@@ -29,7 +29,9 @@ var vm = {};
     [{ id: 1, name: "DG1" }],
   ];
 
-  vm.loginVM = function (route, param) {};
+  vm.loginVM = function (route, param) {
+    console.log('logged in');
+  };
 
   vm.dashboardVM = function (route, param) {
     $(".dashboard__content").empty();

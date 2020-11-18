@@ -1,3 +1,5 @@
+import {vm} from '../scripts/view-models.js'
+
 (function($){
     var routes = {},
     defaultRoute = 'login';
@@ -5,7 +7,7 @@
     routes['login'] = {
         url:'#/',
         templateUrl:'/layouts/login.html',
-        viewModel : vm.loginVM
+        viewModel : vm['loginVM']
     }
     routes['dashboard'] ={
         url:'#/dashboard',

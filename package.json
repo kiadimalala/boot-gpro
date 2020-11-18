@@ -1,0 +1,27 @@
+{
+  "name": "DevinboxGpro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tailwindcss build assets/css/tailwind.css -o public/tailwind.css ",
+    "watch": "tailwindcss build assets/css/tailwind.css -o public/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiadimalala/DevinboxGpro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiadimalala/DevinboxGpro/issues"
+  },
+  "homepage": "https://github.com/kiadimalala/DevinboxGpro#readme",
+  "dependencies": {
+    "tailwindcss": "^1.9.6"
+  }
+}

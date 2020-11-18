@@ -49,14 +49,15 @@
         <h1 class="divisionName text-6xl my-16">DIVISION</h1>
     </div>
     <div class="division__container w-full flex  pb-10 px-32 ">
-        
+
     </div>
     <div class="modal w-full bg-gray-300 ">
         <div class="modal__container h-full w-full flex pl-4">
             <div class="modal__left h-full w-4/6">
                 <div class="task__header w-full flex justify-evenly">
                     <div class="header__title flex w-full pt-3">
-                        <span class="text-5xl pt-2 mr-4 flex"><i class="far fa-credit-card" aria-hidden="true"></i></span>
+                        <span class="text-5xl pt-2 mr-4 flex"><i class="far fa-credit-card"
+                                aria-hidden="true"></i></span>
                         <span class=" flex flex-col ml-2 justify-start">
                             <h1 class="task__title text-4xl flex"></h1>
                             <h1 class=" volet__title text-sm"></h1>
@@ -71,55 +72,68 @@
                             <span class="text-3xl mr-2"><i class="far fa-clock    "></i></span>
                             <input class="h-8 rounded pl-2" type="date" name="" id="">
                         </span>
-                       
+
                     </div>
                 </div>
                 <div class="task__description w-full flex justify-evenly mt-4">
                     <div class="description__field w-full">
                         <span class="flex items-center ml-8 mb-3">
-                            <span class="text-xl flex items-center mr-2"><i class="fa fa-align-justify" aria-hidden="true"></i></span>
+                            <span class="text-xl flex items-center mr-2"><i class="fa fa-align-justify"
+                                    aria-hidden="true"></i></span>
                             <h1 class="text-xl flex items-center">Description</h1>
                         </span>
-                        <textarea class="rounded shadow bg-white focus:bg-gray-100 p-2 focus:outline-none resize-none" name="" id="" cols="60" rows="5" ></textarea>
+                        <textarea class="rounded shadow bg-white focus:bg-gray-100 p-2 focus:outline-none resize-none"
+                            name="" id="" cols="60" rows="5"></textarea>
                     </div>
                     <div class="task__file w-full pl-1 flex flex-col items-center">
                         <span class="flex items-center ml-1 mb-3">
-                            <span class="text-xl flex items-center mr-2"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+                            <span class="text-xl flex items-center mr-2"><i class="fa fa-paperclip"
+                                    aria-hidden="true"></i></span>
                             <h1 class="text-xl flex items-center">Pièce jointe</h1>
                         </span>
                         <span>
-                            <span class="w-full relative px-2  mb-2 h-10 bg-opacity-50 rounded-lg flex items-center  focus:outline-none ">
-                                <span class=" absolute  h-full w-10 flex items-center justify-center text-lg opacity-50"><i
-                                    class="fa fa-plus" aria-hidden="true"></i></span>
-                            <input class=" w-40 shadow-lg border h-full pl-10 opacity-50 text-sm rounded-lg opacity-50 focus:outline-none focus:opacity-100  " placeholder="Ajouter une pièce"/>
-                            </span>
-                            <span class="w-full relative px-2 mb-2 h-10 bg-opacity-50 rounded-lg flex items-center  focus:outline-none ">
-                                <span class=" absolute  h-full w-10 flex items-center justify-center text-lg opacity-50"><i
-                                    class="fa fa-plus" aria-hidden="true"></i></span>
-                            <input class=" w-40 shadow-lg border h-full pl-10 opacity-50 text-sm rounded-lg opacity-50 focus:outline-none focus:opacity-100  " placeholder="Ajouter une pièce"/>
-                            </span>
-                            <span class="w-full relative px-2 mb-2 h-10 bg-opacity-50 rounded-lg flex items-center  focus:outline-none ">
-                                <span class=" absolute  h-full w-10 flex items-center justify-center text-lg opacity-50"><i
-                                    class="fa fa-plus" aria-hidden="true"></i></span>
-                            <input class=" w-40 shadow-lg border h-full pl-10 opacity-50 text-sm rounded-lg opacity-50 focus:outline-none focus:opacity-100  " placeholder="Ajouter une pièce"/>
-                            </span>
+                            <label
+                                class="w-40 relative px-2 ml-2  mb-2 h-10  rounded-lg bg-gray-100 flex items-center shadow focus:outline-none cursor-pointer text-sm ">
+                                <span class=" absolute  h-8 w-8 flex items-center justify-start text-lg opacity-50"><i
+                                        class="fa fa-plus" aria-hidden="true"></i></span>
+                                <input type="file" class=" hidden  " placeholder="Ajouter une pièce" />
+                                <span class="w-full h-8 flex justify-end items-center text-gray-600 mr-2">Ajouter une
+                                    pièce</span>
+                            </label>
+                            <label
+                                class="w-40 relative px-2 ml-2  mb-2 h-10  rounded-lg bg-gray-100 flex items-center shadow focus:outline-none cursor-pointer text-sm ">
+                                <span class=" absolute  h-8 w-8 flex items-center justify-start text-lg opacity-50"><i
+                                        class="fa fa-plus" aria-hidden="true"></i></span>
+                                <input type="file" class=" hidden  " placeholder="Ajouter une pièce" />
+                                <span class="w-full h-8 flex justify-end items-center text-gray-600 mr-2">Ajouter une
+                                    pièce</span>
+                            </label>
+                            <label
+                                class="w-40 relative px-2 ml-2  mb-2 h-10  rounded-lg bg-gray-100 flex items-center shadow focus:outline-none cursor-pointer text-sm ">
+                                <span class=" absolute  h-8 w-8 flex items-center justify-start text-lg opacity-50"><i
+                                        class="fa fa-plus" aria-hidden="true"></i></span>
+                                <input type="file" class=" hidden  " placeholder="Ajouter une pièce" />
+                                <span class="w-full h-8 flex justify-end items-center text-gray-600 mr-2">Ajouter une
+                                    pièce</span>
+                            </label>
+                            
                         </span>
                     </div>
                 </div>
                 <div class="task_cc mt-10 pl-4 rounded flex flex-col w-full mb-1">
                     <div class="task__progress flex items-center w-full">
-                    <h1 class="flex-none">10%</h1>
-                    <div class="task__progress-bar ml-2 h-3 w-full bg-gray-100  flex-shrink-0 flex  items-center">
-                        <span class="h-full bg-green-500 w-full rounded-l"></span>
-                        <span class="h-full  w-full"></span>
-                        <span class="h-full  w-full"></span>
-                        <span class="h-full  w-full"></span>
-                        <span class="h-full  w-full"></span>
-                      
-                        
+                        <h1 class="flex-none">10%</h1>
+                        <div class="task__progress-bar ml-2 h-3 w-full bg-gray-100  flex-shrink-0 flex  items-center">
+                            <span class="h-full bg-green-500 w-full rounded-l"></span>
+                            <span class="h-full  w-full"></span>
+                            <span class="h-full  w-full"></span>
+                            <span class="h-full  w-full"></span>
+                            <span class="h-full  w-full"></span>
+
+
+                        </div>
                     </div>
-                    </div>
-            
+
                     <div class="task__attribution flex-shrink-0 w-full ">
                         <div class="attribution__header flex justify-evenly w-full">
                             <div class="attribution__title flex justify-start w-full ">
@@ -143,7 +157,8 @@
                                     </span>
                                     <h1 class="mr-2 h-full flex items-center">Persone 01</h1>
                                 </span>
-                                <span class="flex items-center h-full "><i class="fa fa-times" aria-hidden="true"></i></span>
+                                <span class="flex items-center h-full "><i class="fa fa-times"
+                                        aria-hidden="true"></i></span>
                             </div>
                             <div class="attrib__checklist w-full flex justify-start items-center mw-1 mt-6">
                                 <span class="flex items-center bg-gray-100 mr-4 h-8 w-40 rounded  shadow">
@@ -152,7 +167,8 @@
                                     </span>
                                     <h1 class="mr-2 h-full flex items-center">Liste 01</h1>
                                 </span>
-                                <span class="flex items-center h-full "><i class="fa fa-times" aria-hidden="true"></i></span>
+                                <span class="flex items-center h-full "><i class="fa fa-times"
+                                        aria-hidden="true"></i></span>
                             </div>
                             <div class="attrib__state w-full">
                                 <div class="state__header w-full flex  text-center items-center">
@@ -162,53 +178,61 @@
                                 </div>
                                 <div class="state__check w-full h-8 flex justify-evenly mt-2 ">
                                     <span class="w-full relative h-full flex justify-center ">
-                                        <span class="absolute h-full text-green-500  flex items-center "><i class="fa fa-recycle" aria-hidden="true"></i></span>
+                                        <span class="absolute h-full text-green-500  flex items-center "><i
+                                                class="fa fa-recycle" aria-hidden="true"></i></span>
                                         <span class="h-full w-8  bg-gray-100 rounded shadow"></span>
                                     </span>
-                                    <span class="w-full relative h-full flex justify-center" >
-                                        <span class="absolute h-full text-green-500  flex items-center "><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span class="w-full relative h-full flex justify-center">
+                                        <span class="absolute h-full text-green-500  flex items-center "><i
+                                                class="fa fa-check" aria-hidden="true"></i></span>
                                         <span class="h-full w-8 bg-gray-100 rounded shadow"></span></span>
-                                    <span class="w-full relative h-full flex justify-center "> 
-                                        <span class="absolute h-full text-yellow-600  flex items-center "><i class="fa fa-archive" aria-hidden="true"></i></i></span>
+                                    <span class="w-full relative h-full flex justify-center ">
+                                        <span class="absolute h-full text-yellow-600  flex items-center "><i
+                                                class="fa fa-archive" aria-hidden="true"></i></i></span>
                                         <span class="h-full w-8  bg-gray-100 rounded shadow"></span></span>
-                                    
+
                                 </div>
                             </div>
                         </div>
                         <div class="attribution__list flex-shrink-0  ">
                             <div class="attrib__responsable w-full flex justify-start items-center mx-1 mt-6">
-                                
+
                                 <span class="flex items-center bg-gray-100 mr-4 h-8 w-40 rounded shadow">
-                                    <span class="flex items-center mx-2 h-full ">
+                                    <span class="flex items-center mx-1 h-full ">
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </span>
-                                    <input id="add__list" class="w-32 h-full pl-2 focus:outline-none" type="text">
+                                    <input id="add__list" class="w-32 h-full focus:outline-none text-gray-500 text-sm pl-1" placeholder="Attribuer une tâche" type="text">
                                 </span>
-                                <span class="flex items-center h-full "><i class="fa fa-clipboard-list" aria-hidden="true"></i></span>
+                                <span class="flex items-center h-full "><i class="fa fa-clipboard-list"
+                                        aria-hidden="true"></i></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-             <div class="modal__right h-full w-2/6 flex flex-col items-end ">
+            <div class="modal__right h-full w-2/6 flex flex-col items-end ">
                 <div class="modal__setting  w-full h-32 ">
-                    <span class="text-5xl w_full flex justify-end "><i class="fa fa-cog" aria-hidden="true"></i></i></span>
+                    <span class="text-5xl w_full flex justify-end "><i class="fa fa-cog"
+                            aria-hidden="true"></i></i></span>
                 </div>
                 <div class="modal__commentaire w-64 rounded-lg py-4 shadow bg-white">
                     <div class="comentary__title h-10 flex items-center justify-center w-full">
-                        <span class="flex h-full text-lg items-center mx-1"><i class="fa fa-comment-alt" aria-hidden="true"></i></span>
+                        <span class="flex h-full text-lg items-center mx-1"><i class="fa fa-comment-alt"
+                                aria-hidden="true"></i></span>
                         <h1 class="text-lg h-full flex items-center mx-1">Commentaire</h1>
                     </div>
                     <div
                         class="w-full relative px-2 h-10 bg-opacity-50 rounded-lg flex items-center  focus:outline-none   ">
                         <span class=" absolute  h-full w-10 flex items-center justify-center text-lg opacity-50"><i
                                 class="fa fa-plus" aria-hidden="true"></i></span>
-                        <input class=" w-full shadow-lg border h-full pl-10 opacity-50 text-sm rounded-lg opacity-50 focus:outline-none focus:opacity-100  " placeholder="Ajouter une carte"/>
+                        <input
+                            class=" w-full shadow-lg border h-full pl-10 opacity-50 text-sm rounded-lg opacity-50 focus:outline-none focus:opacity-100  "
+                            placeholder="Ajouter une carte" />
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
-   
+
 </div>

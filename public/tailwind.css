@@ -21666,10 +21666,81 @@ video {
 }
 
 .login__title{
+  font-size: 4rem;
   margin-top: 2rem;
   margin-bottom: 4rem
 }
 
+.logo__title{
+  font-size: 4rem;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%
+}
+
+.dashboard__title{
+  font-size: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem
+}
+
+.dashboard__item{
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+  --bg-opacity: 0.5;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  --text-opacity: 0.25;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.25rem
+}
+
+.dashboard__add{
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+  --bg-opacity: 0.5;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  --text-opacity: 0.25;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.25rem
+}
+
+.item_logo{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --text-opacity: 1;
+  color: #edf2f7;
+  color: rgba(237, 242, 247, var(--text-opacity))
+}
+
+.add__input{
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  opacity: 0.25;
+  --text-opacity: 1;
+  color: #a0aec0;
+  color: rgba(160, 174, 192, var(--text-opacity))
+}
 
 @media (min-width: 640px) {
   .sm\:container {

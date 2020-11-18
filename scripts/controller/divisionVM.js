@@ -1,4 +1,4 @@
-import {DRT} from '../controller/directionVM.js'
+import {DRT,SDV} from '../controller/directionVM.js'
 
 let volets = [
     {
@@ -23,13 +23,14 @@ let volets = [
   ];
 
 export const divisionVM = function (route, param) {
+  
     $(".divisionName").text(
       `DIVISION ${
-        DRT[param.directionId][param.divisionId].subs[param.divisionId]
+        SDV[param.directionId][param.directionId].titles[param.divisionId]
       }`
     );
 
-    
+
 
     volets.forEach(function (volet, index) {
       const voletElement = `<div class="volet__container volet-${volet.id} bg-gray-300 bg-opacity-50   w-56 rounded-lg mx-8  ">

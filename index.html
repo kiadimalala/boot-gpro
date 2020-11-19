@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css//bootstrap.css" />
+    <link rel="stylesheet" href="./assets/vendor/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  
+  
+ 
+  </head>
+
+  <body class="body" style="background-image: url(./assets/img/background.png);">
+  
+    <div class="login d-flex flex-column justify-content-start align-items-center h-100 pt-4">
+        <h1 class="login__title text-center display-4 mt-5 font-weight-normal ">AUTHENTIFICATION</h1>
+        <div class="login__logo ">
+            <!-- logo ici -->
+            <h1 class="logo__title text-center display-4 mt-5 font-weight-normal  ">DGFAG</h1>
+        </div>
+        <div class="login__card mt-3 d-flex flex-column   mt-5 rounded-lg ">
+            <h1 class="card__title text-center mt-3 mb-4">LOGIN</h1>
+            <div class="card__matricule d-flex  mb-4  px-3  ">
+                <span class="position-absolute  d-flex justify-content-center align-items-center text-xl rounded-lg"><i
+                        class="fa fa-user" aria-hidden="true"></i></span>
+                <input id="matricule" class=" pl-5  w-100 rounded-lg " type="text"
+                    placeholder="Matricule" >
+            </div>
+            <div class="card__password d-flex mt-2  mb-4 px-3 ">
+                <span class="position-absolute d-flex justify-content-center align-items-center  rounded-lg"> <i
+                        class="fa fa-key" aria-hidden="true"></i></span>
+                <input id="password" class="pl-5  w-100 rounded-lg " type="password"
+                    placeholder="Mot de passe">
+            </div>
+            <span class="w-100 px-3">
+                <a href="./dashboard.html"> <button id="soumettre"
+                    class="w-100 btn btn-primary rounded-lg mb-4 text-lg text-gray-100 ">SOUMETTRE</button>
+            </a>
+            </span>
+           
+            <h6 class=" text-right mb-4 ">Mot de passe oublié!?</h6>
+        </div>
+    
+    </div>
+
+  </body>
+  <script src="./js/bootstrap.js"></script>
+  
+  </script>
+  
+</html>
